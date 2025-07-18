@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.container > img {
+  width: 100%;
+}
+.caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.caption > span {
+  display: block;
+}
+.caption_heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+}
+.caption_subtext {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-block: 1em;
+}
