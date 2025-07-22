@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #262626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+.box {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  padding: 40px;
+  color: #fff;
+  text-align: center;
+}
+.about h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.figure::before,
+.figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+  background: url(../assets/sunset-time-tropical-beach-sea-with-coconut-palm-tree.jpg);
+}
+.figure::before {
+  left: 0;
+  transform-origin: bottom;
+}
+.figure::after {
+  right: 0;
+  transform-origin: top;
+  background-position: 300px;
+}
+.box:hover .figure::before {
+  transform: rotateX(90deg) translateY(50%);
+}
+.box:hover .figure::after {
+  transform: rotateX(90deg) translateY(-50%);
+}
