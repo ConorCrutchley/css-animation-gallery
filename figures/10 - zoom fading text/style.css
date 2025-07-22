@@ -1,0 +1,89 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+.container {
+  width: 450px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background-color: #444;
+  border: 10px solid #bbb;
+}
+.container::before,
+.caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container::before,
+.container > img,
+.caption > * {
+  transition: all 0.3s;
+}
+.container::before {
+  content: "";
+  width: 120%;
+  height: 205%;
+  background-color: #006266;
+  opacity: 0;
+  position: absolute;
+  top: -52.5%;
+  left: -10%;
+}
+.container:hover::before {
+  opacity: 1;
+}
+.container > img {
+  width: 100%;
+}
+.container:hover > img {
+  transform: scale(0);
+}
+.caption {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+h2,
+p {
+  transform: scale(10);
+  opacity: 0;
+}
+.container:hover h2,
+.container:hover p {
+  opacity: 1;
+  transform: scale(1);
+}
+h2 {
+  font-size: 17px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+p {
+  font-size: 16px;
+  width: 80%;
+  align-self: center;
+}
+a {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  width: 100px;
+  padding: 15px;
+  margin-bottom: 20px;
+  align-self: center;
+  transform: translateY(150px);
+}
+.container:hover a {
+  transform: translateY(0);
+}
