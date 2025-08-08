@@ -1,0 +1,81 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #333;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul li {
+  list-style: none;
+  padding: 10px 40px;
+}
+ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+  display: block;
+  padding: 5px;
+  position: relative;
+  transition: 0.2s;
+}
+ul li a:hover {
+  color: #ff0;
+}
+span::before,
+span::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  transition: 0.2s;
+  opacity: 0;
+}
+span:first-child::before,
+span:first-child::after {
+  top: 0;
+  border-top: 2px solid #ff0;
+}
+span:last-child::before,
+span:last-child::after {
+  bottom: 0;
+  border-bottom: 2px solid #ff0;
+}
+span:first-child::before,
+span:last-child::before {
+  left: 0;
+  border-left: 2px solid #ff0;
+}
+span:first-child::after,
+span:last-child::after {
+  right: 0;
+  border-right: 2px solid #ff0;
+}
+ul li a:hover span::before,
+ul li a:hover span::after {
+  opacity: 1;
+}
+ul li a:hover span:first-child::before,
+ul li a:hover span:first-child::after {
+  top: -10px;
+}
+ul li a:hover span:last-child::before,
+ul li a:hover span:last-child::after {
+  bottom: -10px;
+}
+ul li a:hover span:first-child::before,
+ul li a:hover span:last-child::before {
+  left: -10px;
+}
+ul li a:hover span:first-child::after,
+ul li a:hover span:last-child::after {
+  right: -10px;
+}
